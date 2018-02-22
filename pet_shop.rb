@@ -6,6 +6,10 @@ def total_cash(shop)
   return shop[:admin][:total_cash]
 end
 
+# def stock_count(pet_shop)
+#   return pets_in_stock(pet_shop).count
+# end
+
 def add_or_remove_cash(shop, amount)
   shop[:admin][:total_cash] += amount
 end
@@ -31,6 +35,17 @@ def pets_by_breed(shop, breed)
     end
   end
 
- return pets
+  return pets
 
+end
+
+def find_pet_by_name(shop, name)
+  pets = nil
+  
+  for pet in shop[:pets]
+    if pet[:name] == name
+      return pet
+    end
+  end
+  return pets
 end

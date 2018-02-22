@@ -116,4 +116,14 @@ class TestPetShop < Minitest::Test
     assert_equal(0, pets.count)
   end
 
+  def test_find_pet_by_name__returns_pet
+    pet = find_pet_by_name(@pet_shop, "Stacy")
+    assert_equal("Stacy", pet[:name])
+  end
+
+  def test_find_pet_by_name_returns_nill
+    pet = find_pet_by_name(@pet_shop, "Pablo")
+    assert_nil(pet)
+  end
+
 end
