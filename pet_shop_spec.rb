@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/rg'
-require_relative '../pet_shop.rb'
+require_relative './pet_shop.rb'
 
 class TestPetShop < Minitest::Test
 
@@ -20,10 +20,10 @@ class TestPetShop < Minitest::Test
     ]
 
     @new_pet = {
-      name: "Ozzy"
+      name: "Ozzy",
       pet_type: :cat,
       breed: "Bengal",
-      price: 100
+      price: 100,
     }
 
     @pet_shop = {
@@ -68,9 +68,9 @@ class TestPetShop < Minitest::Test
 
   end
 
-  # def test_pet_shop_name
-  #   name = pet_shop_name(@pet_shop)
-  #   assert_equal("Cats in Space", name)
-  # end
+  def test_pet_shop_name
+    name = pet_shop_name(@pet_shop)
+    assert_equal("Cats in Space", name)
+  end
 
 end
