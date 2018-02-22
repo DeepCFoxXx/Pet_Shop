@@ -43,7 +43,7 @@ class TestPetShop < Minitest::Test
         {
           name: "Elton",
           pet_type: :cat,
-          breed: "Ragdoll",
+          breed: "British Shorthair",
           price: 300,
         },
         {
@@ -104,6 +104,11 @@ class TestPetShop < Minitest::Test
   def test_stock_count
     count = stock_count(@pet_shop)
     assert_equal(5, count)
+  end
+
+  def test_pets_by_breed
+    pets = pets_by_breed(@pet_shop, "British Shorthair")
+    assert_equal(2, pets.count)
   end
 
 end
