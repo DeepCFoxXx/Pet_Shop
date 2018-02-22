@@ -53,3 +53,7 @@ end
 def add_pet_to_stock(shop, pet)
   pets_in_stock(shop).push(pet)
 end
+
+def customer_pet_count(customer)
+  return customer[:pets].count
+end
