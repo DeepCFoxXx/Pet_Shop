@@ -126,4 +126,10 @@ class TestPetShop < Minitest::Test
     assert_nil(pet)
   end
 
+  def test_add_pet_to_stock
+    add_pet_to_stock(@pet_shop, @new_pet)
+    count = stock_count(@pet_shop)
+    assert_equal(6, count)
+  end
+
 end
