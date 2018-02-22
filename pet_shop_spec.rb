@@ -101,4 +101,9 @@ class TestPetShop < Minitest::Test
     assert_equal(2, sold)
   end
 
+  def test_stock_count
+    count = stock_count(@pet_shop)
+    assert_equal(5, count)
+  end
+
 end
