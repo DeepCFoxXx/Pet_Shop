@@ -73,4 +73,9 @@ class TestPetShop < Minitest::Test
     assert_equal("Cats in Space", name)
   end
 
+  def test_total_cash
+    sum = total_cash(@pet_shop)
+    assert_equal(1000, sum)
+  end
+
 end
